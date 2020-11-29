@@ -3,6 +3,14 @@
     include_once dirname(__FILE__, 2) . '/repository/config.php';
     $con = mysqli_connect(HOST_DB, USUARIO_DB, USUARIO_PASS, NOMBRE_DB);
     //------------------------------------------------------------------
+    $sql = "CREATE TABLE log 
+    (
+    PID INT NOT NULL AUTO_INCREMENT, 
+    PRIMARY KEY(PID),
+    usuario CHAR(50) NOT NULL,
+    movimiento VARCHAR(255),
+    )";
+    //------------------------------------------------------------------
     $sql = "CREATE TABLE roles 
     (
     PID INT NOT NULL AUTO_INCREMENT, 
