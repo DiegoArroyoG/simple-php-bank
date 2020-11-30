@@ -67,8 +67,8 @@
     cuota INT NOT NULL,
     interes DECIMAL(9, 8) NOT NULL,
     UNIQUE KEY numero(numero),
-    FOREIGN KEY (producto_id) REFERENCES usuarios(PID),
-    FOREIGN KEY (usuario_id) REFERENCES productos(PID)
+    FOREIGN KEY (producto_id) REFERENCES productos(PID),
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(PID)
     )";
     if (mysqli_query($con, $sql)) {
         $resultado.= "Tabla tarjeta_usuario creada correctamente <br>";
@@ -83,8 +83,8 @@
     producto_id INT NOT NULL,
     usuario_id INT NOT NULL,
     fondos INT NOT NULL,
-    FOREIGN KEY (producto_id) REFERENCES usuarios(PID),
-    FOREIGN KEY (usuario_id) REFERENCES productos(PID)
+    FOREIGN KEY (producto_id) REFERENCES productos(PID),
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(PID)
     )";
     if (mysqli_query($con, $sql)) {
         $resultado.= "Tabla ahorros_usuario creada correctamente <br>";
@@ -97,13 +97,14 @@
     PID INT NOT NULL AUTO_INCREMENT, 
     PRIMARY KEY(PID),
     producto_id INT NOT NULL,
-    usuario_id INT NOT NULL,
+    usuario_id VARCHAR(50) NOT NULL,
     credito INT NOT NULL, 
     abono INT NOT NULL,
     interes DECIMAL(9, 8) NOT NULL,
-    fecha_pago DATE NOT NULL,
-    FOREIGN KEY (producto_id) REFERENCES usuarios(PID),
-    FOREIGN KEY (usuario_id) REFERENCES productos(PID)
+    aprobado BOOLEAN NOT NULL,
+    fecha_pago INT NOT NULL,
+    UNIQUE KEY usuario_id(usuario_id),
+    FOREIGN KEY (producto_id) REFERENCES productos(PID)
     )";
     if (mysqli_query($con, $sql)) {
         $resultado.= "Tabla credito_usuario creada correctamente <br>";

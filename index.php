@@ -52,6 +52,10 @@
         Numero de cuenta: <input type="number" name="numero_cuenta"/>
         Retiro: <input type="number" name="retiro"/>
         <input type="submit" value="Retirar" name="retirar"/>
+        <br><br>
+        <input type="submit" value="Pedir credito" formaction="view/credito.php"/>
+        <br><br>
+        <input type="submit" value="Consignar" formaction="view/consignar.php"/>
     </form>
     <?php
         if(isset($_POST['crear_cuenta'])) echo crear_cuenta();
