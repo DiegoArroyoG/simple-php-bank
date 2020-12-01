@@ -61,12 +61,12 @@
     PRIMARY KEY(PID),
     producto_id INT NOT NULL,
     usuario_id INT NOT NULL,
-    numero INT NOT NULL, 
     cupo INT NOT NULL,
     sobrecupo INT NOT NULL,
+    deuda INT NOT NULL,
     cuota INT NOT NULL,
     interes DECIMAL(9, 8) NOT NULL,
-    UNIQUE KEY numero(numero),
+    aprobado BOOLEAN NOT NULL,
     FOREIGN KEY (producto_id) REFERENCES productos(PID),
     FOREIGN KEY (usuario_id) REFERENCES usuarios(PID)
     )";

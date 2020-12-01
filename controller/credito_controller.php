@@ -11,7 +11,7 @@
         $email=mysqli_real_escape_string($con, $_POST['email']);
         $credito=mysqli_real_escape_string($con, $_POST['credito']);
         $dia=date("d");
-        $sql = "INSERT INTO credito_usuario (producto_id, usuario_id, credito, abono, interes, aprobado, fecha_pago) VALUES ('2', '$email', '$credito', '0', '0.128', FALSE, '$dia')";
+        $sql = "INSERT INTO credito_usuario (producto_id, usuario_id, credito, abono, interes, aprobado, fecha_pago) VALUES ('2', '$email', '$credito', '0', '0.128', TRUE, '$dia')";
         if(!mysqli_query($con,$sql)) return $html.= "Error en la creación de su crédito";
         $html.="Creación de su créditos exitosa, queda en espera de aprobación";
         mysqli_close($con);

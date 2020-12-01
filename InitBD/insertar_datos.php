@@ -50,6 +50,15 @@
         else{
             $resultado.= "Error insertando a Visitantes en roles <br>";
         }
+        //------------------------------------------------------------------------
+        $contrasena=password_hash("admin", PASSWORD_DEFAULT);
+        $sql = "INSERT INTO usuarios (usuario, contrasena, rol_id, token) VALUES ('admin', '$contrasena', '1', '0')";
+        if(mysqli_query($con,$sql)){
+            $resultado.= "Se ha insertado a Admin en usuarios <br>";
+        }
+        else{
+            $resultado.= "Error insertando a Admin en usuarios <br>";
+        }
     }
     $resultado.=
     "<ul>

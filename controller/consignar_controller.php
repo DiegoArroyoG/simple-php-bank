@@ -11,7 +11,8 @@
         if (!isset($_POST['consignado']) || $_POST['consignado']<0) return $html.= "Cantidad a consignar invalida";
         $token=mysqli_real_escape_string($con, $_SESSION['token']);
         $numero_cuenta=mysqli_real_escape_string($con, $_POST['numero_cuenta']);
-        $consignado=mysqli_real_escape_string($con, $_POST['consignado']);
+        if($_POST["moneda"] == "javecoins") $consignado=mysqli_real_escape_string($con, $_POST['consignado']);
+        else $consignado=mysqli_real_escape_string($con, $_POST['consignado'])/1000;
         $sql = "SELECT PID FROM usuarios WHERE token='$token'";
         if(!$resultado_usuario = mysqli_query($con,$sql)) return $html.="Error de autenticación";
         if(!$usuario = mysqli_fetch_array($resultado_usuario)) return $html.="Error de autenticación";

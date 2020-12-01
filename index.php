@@ -1,5 +1,6 @@
 <?php
     include_once(dirname(__FILE__) . '/controller/ahorros_controller.php');
+    include_once(dirname(__FILE__) . '/controller/tarjeta_controller.php');
     if(!isset($_SESSION)) session_start(); 
 ?>
 <!DOCTYPE html>
@@ -56,10 +57,25 @@
         <input type="submit" value="Pedir credito" formaction="view/credito.php"/>
         <br><br>
         <input type="submit" value="Consignar" formaction="view/consignar.php"/>
+        <br><br>
+        <input type="submit" value="Solicitar tarjeta de credito" name="tarjeta"/>
+        <br>
+        Numero de tarjeta: <input type="number" name="numero_cuenta"/>
+        Cuotas: <input type="number" name="cuotas"/>
+        Precio de la compra: <input type="number" name="consignado"/>
+        <select name="moneda">
+            <option value="javecoins">JaveCoins</option>
+            <option value="pesos">Pesos</option>
+        </select>
+        <input type="submit" value="Comprar" name="comprar"/>
+        <br><br>
+        <input type="submit" value="Administrar tarjetas" formaction="view/administrar_tarjetas.php"/>
     </form>
     <?php
         if(isset($_POST['crear_cuenta'])) echo crear_cuenta();
         if(isset($_POST['retirar'])) echo retirar();
+        if(isset($_POST['tarjeta'])) echo crear_tarjeta();
+        if(isset($_POST['comprar'])) echo comprar();
     ?>
 </body>
 </html>
