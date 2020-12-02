@@ -1,0 +1,49 @@
+
+
+.todo{
+    background-color: #22393B;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+    font-size: larger;
+    color: azure;
+    overflow: auto;
+}
+
+input[type=button], input[type=submit] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .contenedor-notas{
+      border: 5px solid red;
+  }
+
+  .funcionalidad{
+      float: left;
+  }
+
+  .proyecto{
+      padding: 5px;  
+  }
+
+  .auten{
+      text-align: center;
+  }
+
+  .funcionalidad{
+      float: left;
+  }
+
+  .lado{
+      
+  }
+

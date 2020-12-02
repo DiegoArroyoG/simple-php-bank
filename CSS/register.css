@@ -1,0 +1,23 @@
+.contenedor{
+    background-color:#22393B;
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid #ccc;
+  /* IMPORTANTE */
+    text-align: center;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+table, th, td{
+  border: 1px solid white;
+  color: white;
+  align-items: center;
+}
+
+button{
+  color: greenyellow;
+}

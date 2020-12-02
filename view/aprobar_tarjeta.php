@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../CSS/register.css" type="text/css">
+
+<div class="contenedor">
 <?php
     include_once(dirname(__FILE__, 2) . '/controller/admin_controller.php');
 
@@ -22,3 +25,5 @@
             echo $html;
         }
     if(isset($_POST['aprobar'])) echo aprobar();
+    ?>
+</div>

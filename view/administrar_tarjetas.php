@@ -1,8 +1,12 @@
+<link rel="stylesheet" href="../CSS/register.css" type="text/css">
+
 <?php
     include_once(dirname(__FILE__, 2) . '/controller/admin_controller.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
+<div class="contenedor">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,4 +45,5 @@
         </li>
     </ul>
 </body>
+</div>
 </html>

@@ -1,8 +1,11 @@
+<link rel="stylesheet" href="../CSS/register.css" type="text/css">
+
 <?php
     include_once(dirname(__FILE__, 2) . '/controller/usuarios_controller.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<div class = "contenedor">
 <head>
     <title>Registro</title>
 </head>
@@ -24,4 +27,7 @@
         </li>
     </ul>
 </body>
+
+</div>
+
 </html>

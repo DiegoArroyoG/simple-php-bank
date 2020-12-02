@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../CSS/register.css" type="text/css">
+
+<div class = "contenedor">
 <?php
     include_once(dirname(__FILE__, 2) . '/controller/consignar_controller.php');
     if(!isset($_SESSION)) session_start(); 
@@ -77,3 +80,6 @@
         unset($_SESSION['token']);
         header("Refresh:0");
     }
+
+    ?>
+</div>
